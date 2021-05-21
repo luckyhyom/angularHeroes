@@ -11,7 +11,7 @@ export class HeroesComponent implements OnInit {
 
   heroes = HEROES;
 
-  selectedHero:any;
+  selectedHero!:Hero;
     
 
   constructor() { }
@@ -20,10 +20,6 @@ export class HeroesComponent implements OnInit {
   }
 
   onSelect(hero : Hero){
-    // if(this.selectedHero.includes(hero)){
-    //   return;
-    // }
-    // this.selectedHero.push(hero);
     this.selectedHero=hero;
   }
 
