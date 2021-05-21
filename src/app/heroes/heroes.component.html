@@ -1,0 +1,24 @@
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+    <!-- 내 생각: hero id값을 innerText로 가진 요소를 선택해서 style지정 -->
+    <!-- 다큐먼트 : 선택된 히어로들의 배열을 만듦. -->
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)"
+    [class.selected]="hero === selectedHero"
+    >
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>
+
+<!-- <div *ngFor="let sel of selectedHero">
+</div> -->
+
+<div *ngIf="selectedHero">
+<h2>{{selectedHero.name | uppercase}} Details</h2>
+<div><span>id : </span>{{selectedHero.id}}</div>
+<div>
+    <label >name:
+        <input [(ngModel)]="selectedHero.name" placeholder="name">
+    </label>
+</div>
+</div>
