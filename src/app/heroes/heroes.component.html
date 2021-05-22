@@ -12,9 +12,8 @@
 
 <!-- selectedHero가 갱신되면 자동으로 input에 들어가는 hero데이터도 갱신된다.
     왜? 함수가 실행될때마다 전체적으로 리로딩되나. 객체가 바뀔때마다? ㅇㅎ!
- -->
+-->
 <app-hero-detail [hero]="selectedHero" str="anything~!~!"></app-hero-detail>
-
 <!-- <div *ngIf="selectedHero">
 <h2>{{selectedHero.name | uppercase}} Details</h2>
 <div><span>id : </span>{{selectedHero.id}}</div>

@@ -1,2 +1,12 @@
-{{title}}
-<app-heroes></app-heroes>
+<h1>{{title}}</h1>
+<nav>
+    <!-- routerLink는 앵귤러에서 SPA 처리하고, href는 진짜로 경로를 바꿈(새로 페이지를 시작) -->
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+<!--
+    app-routing에 선언되어있는 routes..
+    ajax처럼 딱 router-outlet부분만 주소에따라 변경됨.
+-->
+<router-outlet></router-outlet>
+<app-messages></app-messages>
