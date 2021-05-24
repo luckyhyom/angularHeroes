@@ -1,3 +1,4 @@
+<!-- hero 한명이 들어있는 컴포넌트! hero 한명의 모습을 표현 한다고 할 수 있을것같다. -->
 <div *ngIf="hero">
     <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id : </span>{{hero.id}}</div>
@@ -6,6 +7,11 @@
             <input [(ngModel)]="hero.name" placeholder="name">
         </label>
     </div>
+    <button (click)="save()">save</button>
+    <button (click)="goBack()">go back</button>
 </div>
 
-{{str}}
+<!-- 
+<div *ngIf="str">
+    {{str.name}}
+</div> -->
